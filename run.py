@@ -12,7 +12,6 @@ def make_board():
 
 board = make_board()
 game_over = False
-print(board)
 
 
 def print_board():
@@ -39,7 +38,7 @@ def is_valid_move(board, column):
 
 def get_row(board, column):
     """check board for empty row and return that row"""
-    for row in range(BOARD_ROWS): 
+    for row in range(BOARD_ROWS-1,-1,-1): 
         if board[row][column] == " ":
             return row
     return False   
@@ -62,7 +61,7 @@ def play_game():
         try:
             global turns
             if turns % 2 == 0:
-                column = int(input(f" Please choose a column (1-{BOARD_COLS}): "))
+                column = int(input(f" Please choose a column (1-{BOARD_COLS}): \n"))
                 if is_valid_move(board, column):
                     row = get_row(board, column)
                     make_move(board, row, column,'🟡' )
