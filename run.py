@@ -33,11 +33,17 @@ def is_valid_move(board, column):
     
 
 
-def get_row():
-   
+def get_row(board, column):
+    """check board for empty row and return that row"""
+    for row in range(BOARD_ROWS): 
+        if board[row][column] == " ":
+            return row
+    return False   
+    
 
 
 def make_move():
+    pass
   
 
 def check_if_winner():
@@ -52,10 +58,10 @@ def play_game():
             if turns % 2 == 0:
                 column = int(input(f" Please choose a column (1-{BOARD_COLS}): "))
                 if is_valid_move(board, column):
-                    pass
+                    row = get_row(board, column)
                            
             else:
-                column = int(input(f" Please choose a column (1-{BOARD_COLS}): "))    
+                continue
         except:
             print("Please choose a number between 1 and 7:")
 
