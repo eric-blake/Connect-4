@@ -10,6 +10,7 @@ def make_board():
 
 board = make_board()
 game_over = False
+print(board)
 
 
 def print_board():
@@ -42,8 +43,10 @@ def get_row(board, column):
     
 
 
-def make_move():
-    pass
+def make_move(board, row, column, chip):
+    """Drop chip in selected slot"""
+    board[row][column] = chip
+    print_board()
   
 
 def check_if_winner():
@@ -59,6 +62,8 @@ def play_game():
                 column = int(input(f" Please choose a column (1-{BOARD_COLS}): "))
                 if is_valid_move(board, column):
                     row = get_row(board, column)
+                    make_move = (board, row, column,'🟡' )
+                    turns += 1
                            
             else:
                 continue
