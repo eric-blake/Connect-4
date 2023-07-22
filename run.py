@@ -24,4 +24,22 @@ def print_board():
     print("\n")
     return board
    
-print_board()
+#print_board()
+
+def is_valid_move():
+    pass
+
+def get_row():
+    pass
+
+
+def make_move():
+    pass
+
+def check_if_winner():
+    pass
+
+
+def play_game():
+    pass
+
