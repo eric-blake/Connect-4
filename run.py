@@ -5,6 +5,21 @@ BOARD_ROWS = 6
 turns = 0
 
 
+def welcome():
+    """Prints the welcome message and prompts the user for their name"""
+    print("Welcome to Connect-4 game")
+    print("\n")
+    name = input("What is your name? \n ")
+    print("\n")
+    # isalpha method from stack overflow
+    while not name.isalpha() or len(name) < 2:
+        print("invalid name, please enter 2 or mroe letters only")
+        name = input("What is your name? \n")
+    print('Hello ' + name)
+    print("\n")
+    return name
+
+
 def make_board():
     """Sets the board size"""
     board = [[" " for column in range(BOARD_COLS)] for row in range(BOARD_ROWS)]
@@ -56,6 +71,7 @@ def check_if_winner():
 
 
 def play_game():
+    welcome()
     game_over = False     
     while not game_over:
         try:
