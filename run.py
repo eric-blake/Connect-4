@@ -1,5 +1,6 @@
 BOARD_COLS = 7
 BOARD_ROWS = 6
+turns = 0
 
 
 def make_board():
@@ -8,7 +9,7 @@ def make_board():
     return board
 
 board = make_board()
-
+game_over = False
 
 
 def print_board():
@@ -41,5 +42,18 @@ def check_if_winner():
 
 
 def play_game():
-    pass
+    game_over = False     
+    while not game_over:
+        try:
+            if turns % 2 == 0:
+                column = int(input(f" Please choose a column (1-{BOARD_COLS}): "))
+                           
+            else:
+                pass 
+            
+                       
+        except:
+            print("Please choose a number between 1 and 7:")
 
+
+play_game()
