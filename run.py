@@ -68,7 +68,27 @@ def make_move(board, row, column, chip):
   
 
 def check_if_winner():
-    pass
+    """Check if four in a row and return winner"""
+    # Check vertical grid for winner
+    for row in range(BOARD_ROWS):
+        for column in range(BOARD_COLS - 3):                             
+            if(board[row][column] == '🟡' and board[row][column + 1] == '🟡' and board[row][column + 2] == '🟡' and board[row][column + 3] == '🟡'):
+                print(f" {'🟡'} Wins")
+                return True
+            elif(board[row][column] == '🔴' and board[row][column + 1] == '🔴' and board[row][column + 2] == '🔴' and board[row][column + 3] == '🔴'):
+                print(f" {'🔴'} Wins")
+                return True
+       
+    #Check vertical grid for winner
+    for row in range(BOARD_ROWS -3):
+        for column in range(BOARD_COLS): 
+            if(board[row][column] == '🟡' and board[row + 1][column] == '🟡' and board[row + 2][column] == '🟡' and board[row + 3][column] == '🟡'):
+                print(f" {'🟡'} Wins")
+                return True
+            elif (board[row][column] == '🔴' and board[row + 1][column] == '🔴' and board[row + 2][column] == '🔴' and board[row + 3][column] == '🔴'):
+                print(f" {'🔴'} Wins")
+                return True     
+                  
 
 
 def play_game():
@@ -85,9 +105,10 @@ def play_game():
                     turns += 1
                            
             else:
-                print("Computers move next")
+                print("Computers move next - Please wait")
                 print("\n")
-                time.sleep(3)
+                #time delay from Stack overflow
+                time.sleep(2)
                 column = random_number()
                 if is_valid_move(board, column):
                     row = get_row(board, column,)
