@@ -1,3 +1,5 @@
+from random import randint
+
 BOARD_COLS = 7
 BOARD_ROWS = 6
 turns = 0
@@ -30,7 +32,8 @@ def print_board():
 
 def is_valid_move(board, column):
     """check if top column is free, if true then make move"""
-    return board[BOARD_ROWS-1][column] == " "
+    #return board[BOARD_ROWS-1][column] == " "
+    return True
     
 
 
@@ -62,13 +65,18 @@ def play_game():
                 column = int(input(f" Please choose a column (1-{BOARD_COLS}): "))
                 if is_valid_move(board, column):
                     row = get_row(board, column)
-                    make_move = (board, row, column,'🟡' )
+                    make_move(board, row, column,'🟡' )
                     turns += 1
                            
             else:
                 continue
         except:
             print("Please choose a number between 1 and 7:")
+        game_over = check_if_winner()
 
+
+def random_number():
+    """Random number generated for computers move"""
+    return randint(0, BOARD_COLS - 1)        
 
 play_game()
