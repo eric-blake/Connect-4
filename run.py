@@ -138,7 +138,8 @@ def check_if_winner():
 
 
 def play_game():
-    # welcome()
+    welcome()
+    print_board()
     game_over = False
     while not game_over:
         try:
@@ -160,8 +161,6 @@ def play_game():
                 if is_valid_move(board, column):
                     row = get_row(board, column)
                     make_move(board, row, column, '🔴')
-                    # print(f"computer row is {row}")
-                    # print(f"computer column is {column}")
                     turns += 1
 
         except:
