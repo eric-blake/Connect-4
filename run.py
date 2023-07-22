@@ -47,8 +47,9 @@ def print_board():
 
 def is_valid_move(board, column):
     """check if top column is free, if true then make move"""
-    #return board[BOARD_ROWS-1][column] == " "
-    return True
+    if board[BOARD_ROWS-6][column] == " ":
+        return True
+    return False
     
 
 
@@ -112,7 +113,7 @@ def check_if_winner():
 
 
 def play_game():
-    welcome()
+    #welcome()
     game_over = False     
     while not game_over:
         try:
@@ -128,16 +129,22 @@ def play_game():
                 print("Computers move next - Please wait")
                 print("\n")
                 #time delay from Stack overflow
-                time.sleep(2)
+                #time.sleep(2)
                 column = random_number()
                 if is_valid_move(board, column):
-                    row = get_row(board, column,)
+                    row = get_row(board, column)
                     make_move(board, row, column,'🔴')
+                    print(f"computer row is {row}")
+                    print(f"computer column is {column}")
                     turns += 1
 
         except:
             print("Please choose a number between 1 and 7:")
         game_over = check_if_winner()
+
+        if not any (' ' in row for row in board):
+            print("Game over - Draw")
+            return
 
 
 def random_number():
