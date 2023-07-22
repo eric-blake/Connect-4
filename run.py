@@ -1,4 +1,5 @@
 from random import randint
+import time
 
 BOARD_COLS = 7
 BOARD_ROWS = 6
@@ -84,6 +85,9 @@ def play_game():
                     turns += 1
                            
             else:
+                print("Computers move next")
+                print("\n")
+                time.sleep(3)
                 column = random_number()
                 if is_valid_move(board, column):
                     row = get_row(board, column,)
