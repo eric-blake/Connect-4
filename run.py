@@ -69,7 +69,12 @@ def play_game():
                     turns += 1
                            
             else:
-                continue
+                column = random_number()
+                if is_valid_move(board, column):
+                    row = get_row(board, column,)
+                    make_move(board, row, column,'🔴')
+                    turns += 1
+
         except:
             print("Please choose a number between 1 and 7:")
         game_over = check_if_winner()
