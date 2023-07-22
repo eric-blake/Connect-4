@@ -27,15 +27,18 @@ def print_board():
    
 #print_board()
 
-def is_valid_move():
-    pass
+def is_valid_move(board, column):
+    """check if top column is free, if true then make move"""
+    return board[BOARD_ROWS-1][column] == " "
+    
+
 
 def get_row():
-    pass
+   
 
 
 def make_move():
-    pass
+  
 
 def check_if_winner():
     pass
@@ -45,13 +48,14 @@ def play_game():
     game_over = False     
     while not game_over:
         try:
+            global turns
             if turns % 2 == 0:
                 column = int(input(f" Please choose a column (1-{BOARD_COLS}): "))
+                if is_valid_move(board, column):
+                    pass
                            
             else:
-                pass 
-            
-                       
+                column = int(input(f" Please choose a column (1-{BOARD_COLS}): "))    
         except:
             print("Please choose a number between 1 and 7:")
 
