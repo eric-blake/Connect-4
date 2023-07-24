@@ -1,32 +1,62 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Connect-4
 
-Welcome,
+<img src="" alt="Screenshot from http://ami.responsivedesign.is/ website, that show how the website looks on commons screen sizes">
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+Connect-4 is a Python terminal game, which runs in the Code Institute mock terminal on Heroku.
 
-## Reminders
+Connect 4 is a two-player connection rack game, in which the players choose a color and then take turns dropping colored tokens into a six-row, seven-column vertically suspended grid. The pieces fall straight down, occupying the lowest available space within the column. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own tokens. Connect Four is a solved game. The first player can always win by playing the right moves. You can read more about it on [Wikipedia](https://en.wikipedia.org/wiki/Connect_Four "Wikipedia")
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## How to play:
 
-## Creating the Heroku app
+My verison of the game has been modified in to a one player game, where the player plays against the computer.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+The player and the computer take turns dropping the tokens 
 
-1. `heroku/python`
-2. `heroku/nodejs`
+-By Eric Blake
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+# [Live site](https://connect-4-eb-e1e4322e00d6.herokuapp.com/ "Live site") 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
+## UX design:
+As this is a Python terminal game
 
-## Constraints
+### Wireframe
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+## Features:
 
----
+## Future Features
 
-Happy coding!
+## Technologies Used
+
+### Libraries Used
+
+## Testing:
+
+### Manual Testing
+| Test | Result |
+| ------------- | ------------- |
+|  | |
+
+### Validator Testing:
+
+
+## Bugs
+
+* ### Fixed bugs
+
+* ### Unfixed Bugs
+No unfixed bugs
+
+
+## Deployment and local development
+### Deployment
+
+### Forking the repository
+By forking the repository, you can make a copy of the repository and make changes without affecting the original repository. the steps to fork are as follows
+* Locate the repository in Github.
+* On the top right corner of the page click Fork.
+* A copy of the repository will now be created in your own repository
+
+## Credits
+
+## Acknowledgements
