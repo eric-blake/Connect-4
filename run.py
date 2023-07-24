@@ -10,6 +10,7 @@ def welcome():
     """Prints the welcome message and prompts the user for their name"""
     print("Welcome to Connect-4 game")
     print("\n")
+    global name
     name = input("What is your name? \n ")
     print("\n")
     # isalpha method from stack overflow
@@ -69,20 +70,20 @@ def make_move(board, row, column, chip):
 
 def check_if_winner():
     """Check if four in a row and return winner"""
-    # Check vertical axis for winner
+    # Check horizontal axis for winner
     for row in range(BOARD_ROWS):
         for column in range(BOARD_COLS - 3):
             if (board[row][column] == '🟡'
                     and board[row][column + 1] == '🟡'
                     and board[row][column + 2] == '🟡'
                     and board[row][column + 3] == '🟡'):
-                print(f" {'🟡'} Wins")
+                print(f" Congratulations {name} - You Win!")
                 return True
             elif (board[row][column] == '🔴'
                     and board[row][column + 1] == '🔴'
                     and board[row][column + 2] == '🔴'
                     and board[row][column + 3] == '🔴'):
-                print(f" {'🔴'} Wins")
+                print(f" Hard luck {name} - Computer Wins")
                 return True
 
     # Check vertical axis for winner
@@ -92,13 +93,13 @@ def check_if_winner():
                     and board[row + 1][column] == '🟡'
                     and board[row + 2][column] == '🟡'
                     and board[row + 3][column] == '🟡'):
-                print(f" {'🟡'} Wins")
+                print(f" Congratulations {name} - You Win!")
                 return True
             elif (board[row][column] == '🔴'
                     and board[row + 1][column] == '🔴'
                     and board[row + 2][column] == '🔴'
                     and board[row + 3][column] == '🔴'):
-                print(f" {'🔴'} Wins")
+                print(f" Hard luck {name} - Computer Wins")
                 return True
 
     # Check diagonal-right grid for winner
@@ -108,13 +109,13 @@ def check_if_winner():
                     and board[row + 1][column + 1] == '🟡'
                     and board[row + 2][column + 2] == '🟡'
                     and board[row + 3][column + 3] == '🟡'):
-                print(f" {'🟡'} Wins")
+                print(f" Congratulations {name} - You Win!")
                 return True
             elif (board[row][column] == '🔴'
                     and board[row + 1][column + 1] == '🔴'
                     and board[row + 2][column + 2] == '🔴'
                     and board[row + 3][column + 3] == '🔴'):
-                print(f" {'🔴'} Wins")
+                print(f" Hard luck {name} - Computer Wins")
                 return True
 
     # Check diagonal-left grid for winner
@@ -124,14 +125,14 @@ def check_if_winner():
                     and board[row + 1][column - 1] == '🟡'
                     and board[row + 2][column - 2] == '🟡'
                     and board[row + 3][column - 3] == '🟡'):
-                print(f" {'🟡'} Wins")
+                print(f" Congratulations {name} - You Win!")
                 return True
 
             elif (board[row][column] == '🔴'
                     and board[row + 1][column - 1] == '🔴'
                     and board[row + 2][column - 2] == '🔴'
                     and board[row + 3][column - 3] == '🔴'):
-                print(f" {'🔴'} Wins")
+                print(f" Hard luck {name} - Computer Wins")
                 return True
 
     return False
