@@ -11,13 +11,14 @@ def welcome():
     print("Welcome to Connect-4 game")
     print("\n")
     global name
-    name = input("What is your name? \n ")
+    name = input("Please enter your name? \n")
     print("\n")
     # isalpha method from stack overflow
     while not name.isalpha() or len(name) < 2:
-        print("invalid name, please enter 2 or mroe letters only")
+        print("invalid name, please enter 2 or more letters only \n")
         name = input("What is your name? \n")
-    print('Hello ' + name)
+    print(f"Hello {name}, you will be playing against the computer. Take turns dropping colored tokens \n")
+    print("The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of your own tokens")
     print("\n")
     return name
 
@@ -165,7 +166,7 @@ def play_game():
                     turns += 1
 
         except:
-            print("Please choose a number between 1 and 7:")
+            print(" Incorrect entry:\n")
         game_over = check_if_winner()
 
         if not any(' ' in row for row in board):
