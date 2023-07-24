@@ -18,8 +18,10 @@ def welcome():
         print("invalid name, please enter 2 or more letters only \n")
         name = input("What is your name? \n")
     print(f"Hello {name}, you will be playing against the computer. Take turns dropping colored tokens \n")
+    time.sleep(4)
     print("The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of your own tokens")
     print("\n")
+    time.sleep(5)
     return name
 
 
@@ -147,8 +149,8 @@ def play_game():
         try:
             global turns
             if turns % 2 == 0:
-                column = int(input
-                             (f" Please choose a column (1-{BOARD_COLS}): \n"))
+                column = (int(input
+                             (f" Please choose a column (1-{BOARD_COLS}): \n"))-1)
                 if is_valid_move(board, column):
                     row = get_row(board, column)
                     make_move(board, row, column, '🟡')
