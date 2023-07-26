@@ -8,6 +8,14 @@ turns = 0
 
 def welcome():
     """Prints the welcome message and prompts the user for their name"""
+    try:
+        with open('./welcome.txt', 'r') as file:
+            title = file.read()
+            print(title)
+
+    except FileNotFoundError:
+        print("Connect 4")
+
     print("Welcome to Connect-4 game")
     print("\n")
     global name
