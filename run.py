@@ -18,10 +18,10 @@ def welcome():
         print("invalid name, please enter 2 or more letters only \n")
         name = input("What is your name? \n")
     print(f"Hello {name}, you will be playing against the computer. Take turns dropping colored tokens \n")
-    time.sleep(4)
+    time.sleep(1)
     print("The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of your own tokens")
     print("\n")
-    time.sleep(5)
+    time.sleep(1)
     return name
 
 
@@ -103,13 +103,19 @@ def check_if_winner():
                     and board[row][column + 1] == '🟡'
                     and board[row][column + 2] == '🟡'
                     and board[row][column + 3] == '🟡'):
-                print(f" Congratulations {name} - You Win!")
+                if player_chip == '🟡':
+                    print(f" Congratulations {name} - You Win!")
+                else:
+                    print(f" Hard luck {name} - Computer Wins")
                 return True
             elif (board[row][column] == '🔴'
                     and board[row][column + 1] == '🔴'
                     and board[row][column + 2] == '🔴'
                     and board[row][column + 3] == '🔴'):
-                print(f" Hard luck {name} - Computer Wins")
+                if player_chip == '🔴':
+                    print(f" Congratulations {name} - You Win!")
+                else:
+                    print(f" Hard luck {name} - Computer Wins")
                 return True
 
     # Check vertical axis for winner
@@ -119,13 +125,19 @@ def check_if_winner():
                     and board[row + 1][column] == '🟡'
                     and board[row + 2][column] == '🟡'
                     and board[row + 3][column] == '🟡'):
-                print(f" Congratulations {name} - You Win!")
+                if player_chip == '🟡':
+                    print(f" Congratulations {name} - You Win!")
+                else:
+                    print(f" Hard luck {name} - Computer Wins")
                 return True
             elif (board[row][column] == '🔴'
                     and board[row + 1][column] == '🔴'
                     and board[row + 2][column] == '🔴'
                     and board[row + 3][column] == '🔴'):
-                print(f" Hard luck {name} - Computer Wins")
+                if player_chip == '🔴':
+                    print(f" Congratulations {name} - You Win!")
+                else:
+                    print(f" Hard luck {name} - Computer Wins")
                 return True
 
     # Check diagonal-right grid for winner
@@ -135,13 +147,19 @@ def check_if_winner():
                     and board[row + 1][column + 1] == '🟡'
                     and board[row + 2][column + 2] == '🟡'
                     and board[row + 3][column + 3] == '🟡'):
-                print(f" Congratulations {name} - You Win!")
+                if player_chip == '🟡':
+                    print(f" Congratulations {name} - You Win!")
+                else:
+                    print(f" Hard luck {name} - Computer Wins")
                 return True
             elif (board[row][column] == '🔴'
                     and board[row + 1][column + 1] == '🔴'
                     and board[row + 2][column + 2] == '🔴'
                     and board[row + 3][column + 3] == '🔴'):
-                print(f" Hard luck {name} - Computer Wins")
+                if player_chip == '🔴':
+                    print(f" Congratulations {name} - You Win!")
+                else:
+                    print(f" Hard luck {name} - Computer Wins")
                 return True
 
     # Check diagonal-left grid for winner
@@ -151,14 +169,20 @@ def check_if_winner():
                     and board[row + 1][column - 1] == '🟡'
                     and board[row + 2][column - 2] == '🟡'
                     and board[row + 3][column - 3] == '🟡'):
-                print(f" Congratulations {name} - You Win!")
+                if player_chip == '🟡':
+                    print(f" Congratulations {name} - You Win!")
+                else:
+                    print(f" Hard luck {name} - Computer Wins")
                 return True
 
             elif (board[row][column] == '🔴'
                     and board[row + 1][column - 1] == '🔴'
                     and board[row + 2][column - 2] == '🔴'
                     and board[row + 3][column - 3] == '🔴'):
-                print(f" Hard luck {name} - Computer Wins")
+                if player_chip == '🔴':
+                    print(f" Congratulations {name} - You Win!")
+                else:
+                    print(f" Hard luck {name} - Computer Wins")
                 return True
 
     return False
@@ -195,10 +219,24 @@ def play_game():
         except:
             print(" Incorrect entry:\n")
         game_over = check_if_winner()
+        if game_over:
+            restart_game()
+
 
         if not any(' ' in row for row in board):
             print("Game over - Draw")
             return
+        
+    
+def restart_game():
+    restart = input("Press r to restart game or q to quit \n")
+    while restart != "r" and restart != "q":
+        print("Invalid choice")
+        restart = input("Press r to restart game or q to quit \n")
+    if restart == "r":
+        play_game()
+    else:
+        play_game()
 
 
 def random_number():
