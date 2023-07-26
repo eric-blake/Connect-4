@@ -1,5 +1,6 @@
 from random import randint
 import time
+import sys
 
 BOARD_COLS = 7
 BOARD_ROWS = 6
@@ -16,7 +17,7 @@ def welcome():
     except FileNotFoundError:
         print("Connect 4")
 
-    print("Welcome to Connect-4 game")
+    print_slow("Welcome to Connect-4 game")
     print("\n")
     global name
     name = input("Please enter your name? \n")
@@ -25,9 +26,10 @@ def welcome():
     while not name.isalpha() or len(name) < 2:
         print("invalid name, please enter 2 or more letters only \n")
         name = input("What is your name? \n")
-    print(f"Hello {name}, you will be playing against the computer. Take turns dropping colored tokens \n")
+    print_slow(f"Hello {name}, you will be playing against the computer. Take turns dropping colored tokens \n")
+    print("\n")
     time.sleep(1)
-    print("The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of your own tokens")
+    print_slow("The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of your own tokens")
     print("\n")
     time.sleep(1)
     return name
@@ -250,6 +252,13 @@ def restart_game():
 def random_number():
     """Random number generated for computers move"""
     return randint(0, BOARD_COLS - 1)
+
+# print slow function from Stackoverflow
+def print_slow(str):
+    for letter in str:
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        time.sleep(0.05)
 
 
 play_game()
