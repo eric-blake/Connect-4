@@ -71,6 +71,29 @@ def make_move(board, row, column, chip):
     print_board()
 
 
+def player_chip_color():
+    global player_chip
+    player_chip = input("Please type y for yellow chip or r for red chip \n")
+    while player_chip != "y" and player_chip != "r":
+        print("Invalid choice")
+        player_chip = input("Please type y for yellow chip or r for red chip \n")
+    if player_chip == 'r':
+        player_chip = '🔴'
+    elif player_chip == 'y':
+        player_chip = '🟡'
+    return player_chip
+
+
+def computer_chip_color():
+    global computer_chip
+    if player_chip == '🔴':
+        computer_chip = '🟡'
+    elif player_chip == '🟡':
+        computer_chip = '🔴'
+    return computer_chip
+
+
+
 def check_if_winner():
     """Check if four in a row and return winner"""
     # Check horizontal axis for winner
@@ -143,6 +166,8 @@ def check_if_winner():
 
 def play_game():
     welcome()
+    player_chip_color()
+    computer_chip_color()
     print_board()
     game_over = False
     while not game_over:
@@ -150,10 +175,10 @@ def play_game():
             global turns
             if turns % 2 == 0:
                 column = (int(input
-                             (f" Please choose a column (1-{BOARD_COLS}): \n"))-1)
+                             (f" Please choose a column (1-{BOARD_COLS}): \n")) -1)
                 if is_valid_move(board, column):
                     row = get_row(board, column)
-                    make_move(board, row, column, '🟡')
+                    make_move(board, row, column, player_chip)
                     turns += 1
 
             else:
@@ -164,7 +189,7 @@ def play_game():
                 column = random_number()
                 if is_valid_move(board, column):
                     row = get_row(board, column)
-                    make_move(board, row, column, '🔴')
+                    make_move(board, row, column, computer_chip)
                     turns += 1
 
         except:
