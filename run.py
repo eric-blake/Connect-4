@@ -1,6 +1,7 @@
 from random import randint
 import time
 import sys
+import os
 
 BOARD_COLS = 7
 BOARD_ROWS = 6
@@ -13,11 +14,9 @@ def welcome():
         with open('./welcome.txt', 'r') as file:
             title = file.read()
             print(title)
-
     except FileNotFoundError:
         print("Connect 4")
-
-    print_slow("Welcome to Connect-4 game")
+    print_slow("Welcome to Connect-4 game \n")
     print("\n")
     global name
     name = input("Please enter your name? \n")
@@ -232,29 +231,41 @@ def play_game():
         if game_over:
             restart_game()
 
-
         if not any(' ' in row for row in board):
             print("Game over - Draw")
             return
         
     
 def restart_game():
+    """Restarts the game or quits the game"""
     restart = input("Press r to restart game or q to quit \n")
     while restart != "r" and restart != "q":
         print("Invalid choice")
         restart = input("Press r to restart game or q to quit \n")
     if restart == "r":
+        clear()
         play_game()
+
     else:
-        play_game()
+        sys.exit()
+
+# clear function from Stackoverflow
+def clear():
+    """Clears the screen """
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
 
 
 def random_number():
     """Random number generated for computers move"""
     return randint(0, BOARD_COLS - 1)
 
+
 # print slow function from Stackoverflow
 def print_slow(str):
+    """Prints the text in the console slowly"""
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
