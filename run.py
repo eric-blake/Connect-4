@@ -8,6 +8,7 @@ BOARD_ROWS = 6
 turns = 0
 
 
+
 def welcome():
     """Prints the welcome message and prompts the user for their name"""
     try:
@@ -41,8 +42,7 @@ def make_board():
     return board
 
 
-board = make_board()
-game_over = False
+
 
 
 def print_board():
@@ -199,6 +199,13 @@ def check_if_winner():
 
 def play_game():
     welcome()
+    start_game()
+
+
+
+def start_game():
+    global board
+    board = make_board()
     player_chip_color()
     computer_chip_color()
     print_board()
@@ -224,7 +231,7 @@ def play_game():
                     row = get_row(board, column)
                     make_move(board, row, column, computer_chip)
                     turns += 1
-
+        
         except:
             print(" Incorrect entry:\n")
         game_over = check_if_winner()
@@ -244,14 +251,17 @@ def restart_game():
         restart = input("Press r to restart game or q to quit \n")
     if restart == "r":
         clear()
-        play_game()
+        board.clear()
+        make_board()
+        start_game()
 
     else:
         sys.exit()
 
+
 # clear function from Stackoverflow
 def clear():
-    """Clears the screen """
+    """Clears the screen for Windows and Linux"""
     if os.name == 'nt':
         os.system('cls')
     else:
@@ -269,7 +279,9 @@ def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
-        time.sleep(0.05)
+        #time.sleep(0.05)
+        time.sleep(0.0001)
 
 
-play_game()
+if __name__== '__main__':
+    play_game()
