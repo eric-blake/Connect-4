@@ -5,7 +5,7 @@ import os
 
 BOARD_COLS = 7
 BOARD_ROWS = 6
-turns = 0
+#turns = 0
 
 
 
@@ -205,6 +205,8 @@ def play_game():
 
 def start_game():
     global board
+    global turns
+    turns = 0
     board = make_board()
     player_chip_color()
     computer_chip_color()
@@ -212,7 +214,6 @@ def start_game():
     game_over = False
     while not game_over:
         try:
-            global turns
             if turns % 2 == 0:
                 column = (int(input
                              (f" Please choose a column (1-{BOARD_COLS}): \n")) -1)
