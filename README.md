@@ -33,7 +33,7 @@ As this is a Python terminal game, a wireframe was not required
 The game chip colours of red and yellow are used. This is the standard colour scheme for the Connect 4 game.
 
 A flowchart of the game flow and logic was created using Microsoft Visio.  The flow charts shows how the game will flow and allows consideration for the inputs, outputs and validation required.
-<img src="assets/documentation/" alt="Screenshot of flowchart">
+<img src="assets/documentation/flow-chart.PNG" alt="Screenshot of flowchart">
 
 ## Features:
 ### Existing Features
