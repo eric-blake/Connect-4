@@ -20,12 +20,12 @@ def welcome():
     print_slow("Welcome to Connect-4 game \n")
     print("\n")
     global name
-    name = input("Please enter your name? \n")
+    name = input("Please enter your name \n")
     print("\n")
     # isalpha method from stack overflow
     while not name.isalpha() or len(name) < 2:
         print("invalid name, please enter 2 or more letters only \n")
-        name = input("What is your name? \n")
+        name = input("Please enter your name \n")
     print_slow(f"Hello {name}, you will be playing against the computer. Take turns dropping colored tokens \n")
     print("\n")
     time.sleep(1)
@@ -85,7 +85,7 @@ def player_chip_color():
     player_chip = input("Please type y for yellow chip or r for red chip \n")
     while player_chip != "y" and player_chip != "r":
         print("Invalid choice")
-        player_chip = input("Please type y for yellow chip or r for red chip \n")
+        player_chip = input('Please type "y" for yellow chip or "r" for red chip \n')
     if player_chip == 'r':
         player_chip = '🔴'
     elif player_chip == 'y':
@@ -280,8 +280,8 @@ def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
-        #time.sleep(0.05)
-        time.sleep(0.0001)
+        time.sleep(0.05)
+        #time.sleep(0.0001)
 
 
 if __name__== '__main__':
