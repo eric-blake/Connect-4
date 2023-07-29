@@ -26,27 +26,24 @@ A flowchart of the game flow and logic was created using Microsoft Visio.  The f
 ### Existing Features
 ### Welcome page
 * The first section is welcoming the user to the quiz and requesting a username. This is validated so that the username msut be two or more letters.
-<img src="assets/documentation/" alt="Screenshot of flowchart">
+<img src="assets/documentation/welcome-screen.PNG" alt="Screenshot of welcome page">
 
 ### Instructions
-* The next section gives the user information and instructions on how to play the game. the user must select a chip colour - "y" for yellow or "r" for red.
-<img src="assets/documentation/" alt="Screenshot of flowchart">
+* The next section gives the user information and instructions on how to play the game. The user must select a chip colour - "y" for yellow or "r" for red.
+<img src="assets/documentation/instructions.PNG" alt="Screenshot of instructions">
 
 * The user is then prompted to enter a column number between 1 and 7. This is validated to only accept number between 1 and 7.
-<img src="assets/documentation/" alt="Screenshot of flowchart">
+<img src="assets/documentation/select-column.PNG" alt="Screenshot of select column instruction">
 
-* The board is printed and the user is promoted to select a column between 1 and 7. After selecting a number the chip will be dropped in the board and the board re-printed. 
-<img src="assets/documentation/" alt="Screenshot of flowchart">
-
+* After selecting a number the chip will be dropped in the board and the board re-printed.
 * The computer then selects a column at random and drops a chip.
-<img src="assets/documentation/" alt="Screenshot of flowchart">
+<img src="assets/documentation/drop-chip.PNG" alt="Screenshot of drop chip in board">
 
 * If the user wins a congratulation message will be displayed.
-<img src="assets/documentation/" alt="Screenshot of flowchart">
+<img src="assets/documentation/win-game.PNG" alt="Screenshot of win game congratulations message">
 
 * If the user loses a hard luck message will be displayed.
-<img src="assets/documentation/" alt="Screenshot of flowchart">
-
+<img src="assets/documentation/computer-wins.PNG" alt="Screenshot of lose game message">
 
 * If there is no winner a game over - draw message will be displayed.
 <img src="assets/documentation/" alt="Screenshot of flowchart">
@@ -98,6 +95,7 @@ The only coding laugauge used in this project was Python3.
 ## Bugs
 * ### Fixed bugs
 | Test | Result |
+| ------------- | ------------- |
 | Issue with first row showing on top of board instead of bottom  | Updated get_row function so that it goes to first row 0, and subtracts 1 every loop |
 | Turns was not resetting to zero after game restarted  | Added game = 0 to start game function|
 
@@ -105,8 +103,8 @@ The only coding laugauge used in this project was Python3.
 * ### Unfixed Bugs
 No unfixed bugs
 
-## Deployment
-### ## Deployment
+## Deployment and local development
+### Deployment
 * This project was deployed using Code Institutes mock Terminal for Heroku
 * Steps for Deployment 
     * From Heroku Dashboard, select Create new app from the dropdown menu.
@@ -142,3 +140,4 @@ By forking the repository, you can make a copy of the repository and make change
  * Details of Connect-4 game [Wikipedia](https://en.wikipedia.org/wiki/Connect_Four "Wikipedia")
 
 ## Acknowledgements
+*  Mitko Bachvarov. My mentor who provided me with advice and feedback throughout this project
