@@ -24,20 +24,36 @@ A flowchart of the game flow and logic was created using Microsoft Visio.  The f
 
 ## Features:
 ### Existing Features
-* Welcome page
+### Welcome page
+* The first section is welcoming the user to the quiz and requesting a username. This is validated so that the username msut be two or more letters.
 <img src="assets/documentation/" alt="Screenshot of flowchart">
 
-* Instructions
+### Instructions
+* The next section gives the user information and instructions on how to play the game. the user must select a chip colour - "y" for yellow or "r" for red.
 <img src="assets/documentation/" alt="Screenshot of flowchart">
 
-* The user is promoted to enter their name. The name provided must be 2 or more letters.
+* The user is then prompted to enter a column number between 1 and 7. This is validated to only accept number between 1 and 7.
 <img src="assets/documentation/" alt="Screenshot of flowchart">
 
-* The board is printed and the user is promoted to select a column between 1 and 7
+* The board is printed and the user is promoted to select a column between 1 and 7. After selecting a number the chip will be dropped in the board and the board re-printed. 
 <img src="assets/documentation/" alt="Screenshot of flowchart">
 
-* Input validaiton and error-checking
+* The computer then selects a column at random and drops a chip.
 <img src="assets/documentation/" alt="Screenshot of flowchart">
+
+* If the user wins a congratulation message will be displayed.
+<img src="assets/documentation/" alt="Screenshot of flowchart">
+
+* If the user loses a hard luck message will be displayed.
+<img src="assets/documentation/" alt="Screenshot of flowchart">
+
+
+* If there is no winner a game over - draw message will be displayed.
+<img src="assets/documentation/" alt="Screenshot of flowchart">
+
+* At the end of the game the user will have the option to play again or quit. This is validated to only accept the letters "r" for restart or "q" for quit.
+<img src="assets/documentation/" alt="Screenshot of flowchart">
+
 
 ## Future Features
 * Allow player to select the board size by inputting the number of rows and columns
@@ -56,6 +72,8 @@ The only coding laugauge used in this project was Python3.
 ### Libraries Used
 (random) was used to generate column number for the computers move
 (time) was used to puase between player move and computer move
+(sys) wasused for the print slow function
+(os) was used for the clear function
 
 
 ## Testing:
