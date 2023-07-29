@@ -26,7 +26,7 @@ def welcome():
     while not name.isalpha() or len(name) < 2:
         print("invalid name, please enter 2 or more letters only \n")
         name = input("Please enter your name \n")
-    print_slow(f"Hello {name}, you will be playing against the computer. Take turns dropping \n colored tokens \n")
+    print_slow(f"Hello {name}, you will be playing against the computer. Take turns dropping \ncolored tokens \n")
     print("\n")
     time.sleep(1)
     print_slow("The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of your own tokens")
@@ -88,8 +88,12 @@ def player_chip_color():
         player_chip = input('Please type "y" for yellow chip or "r" for red chip \n')
     if player_chip == 'r':
         player_chip = '🔴'
+        print("\n")
+        print("Your chip is 🔴 \n")
     elif player_chip == 'y':
         player_chip = '🟡'
+        print("\n")
+        print("Your chip is 🟡 \n")
     return player_chip
 
 

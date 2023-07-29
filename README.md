@@ -81,7 +81,6 @@ The only coding laugauge used in this project was Python3.
 ### Manual Testing
 | Test | Result |
 | ------------- | ------------- |
-
 | The welcome page and quiz page and are all readable and easy to understand  | Pass |
 | If no username or invalid username is entered an invalid username message is displayed   |Pass  | 
 | If no chip colour or invlaid letter is selected an invalid choice message is displayed   |Pass  | 
