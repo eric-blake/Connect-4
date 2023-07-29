@@ -11,24 +11,37 @@ Connect 4 is a two-player connection rack game. My verison of the game has been 
 
 # [Live site](https://connect-4-eb-e1e4322e00d6.herokuapp.com/ "Live site") 
 
+
+## UX
+
+### Target Audience
+* Anyone with an interest in playing online games
+
+### User goals
+I want to see clear instructions on how to play this game.
+I want easily navigate through the application.
+I want to get feedback on my actions in the game.
+
 ## UX design:
 
 ### Wireframe
-
 As this is a Python terminal game, a wireframe was not required
 
 ### Structure & Logical Flow
+
+### Colour Scheme
+The game chip colours of red and yellow are used. This is the standard colour scheme for the Connect 4 game.
 
 A flowchart of the game flow and logic was created using Microsoft Visio.  The flow charts shows how the game will flow and allows consideration for the inputs, outputs and validation required.
 <img src="assets/documentation/" alt="Screenshot of flowchart">
 
 ## Features:
 ### Existing Features
-### Welcome page
+#### Welcome page
 * The first section is welcoming the user to the quiz and requesting a username. This is validated so that the username msut be two or more letters.
 <img src="assets/documentation/welcome-screen.PNG" alt="Screenshot of welcome page">
 
-### Instructions
+#### Instructions
 * The next section gives the user information and instructions on how to play the game. The user must select a chip colour - "y" for yellow or "r" for red.
 <img src="assets/documentation/instructions.PNG" alt="Screenshot of instructions">
 
@@ -52,7 +65,7 @@ A flowchart of the game flow and logic was created using Microsoft Visio.  The f
 <img src="assets/documentation/" alt="Screenshot of flowchart">
 
 
-## Future Features
+### Future Features
 * Allow player to select the board size by inputting the number of rows and columns
 
 ## Technologies Used
