@@ -81,15 +81,26 @@ The only coding laugauge used in this project was Python3.
 ### Manual Testing
 | Test | Result |
 | ------------- | ------------- |
-|  | |
-### Validator Testing:
 
+| The welcome page and quiz page and are all readable and easy to understand  | Pass |
+| If no username or invalid username is entered an invalid username message is displayed   |Pass  | 
+| If no chip colour or invlaid letter is selected an invalid choice message is displayed   |Pass  | 
+| When game begins the empty board is displayed   |Pass   | 
+| When the user selects a column number the chip is dropped in correct column  |Pass   | 
+| The turns are incremented correctly | Pass  | 
+| The check winner function works in vertical, horizontal and diagonal directions  | Pass  |  
+| When the user selects play again the game restarts  | Pass  | 
+| When the user selects quit game the game quits  | Pass  | 
+
+### Validator Testing:
+ * No errors were returned when passing through the PEP8 validator. 
+    <img src="assets/documentation/" alt="Screenshot of PEP8 Validator results">
 
 ## Bugs
 * ### Fixed bugs
 | Test | Result |
-| ------------- | ------------- |
-|  | |
+| Issue with first row showing on top of board instead of bottom  | Updated get_row function so that it goes to first row 0, and subtracts 1 every loop |
+| Turns was not resetting to zero after game restarted  | Added game = 0 to start game function|
 
 
 * ### Unfixed Bugs
