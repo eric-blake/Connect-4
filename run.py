@@ -253,8 +253,8 @@ def start_game():
     while not game_over:
         try:
             if turns % 2 == 0:
-                column = (int(input(f" Please choose a column "
-                                    "(1-{BOARD_COLS}): \n")) - 1)
+                column = (int(input(f" Please choose a column"
+                                    f"(1-{BOARD_COLS}): \n")) - 1)
                 if is_valid_move(board, column):
                     row = get_row(board, column)
                     make_move(board, row, column, player_chip)
