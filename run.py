@@ -200,7 +200,7 @@ def check_if_winner():
 
 
 def play_game():
-    # welcome()
+    welcome()
     start_game()
 
 
@@ -215,7 +215,7 @@ def prevent_win():
                 and board[row + 1][last_col] == '🟡'
                     and board[row + 2][last_col] == '🟡'):
                 if is_valid_move(board, column):
-                    make_move(board, last_row - 1, last_col, '👽')
+                    make_move(board, last_row - 1, last_col, '🔴')
                     return True
                 return False
 
@@ -235,9 +235,7 @@ def prevent_win():
 
 
 def computer_move():
-    #while not is_valid_move(board, column):
     column = random_number()
-    print(f"random number is {column}")
     if is_valid_move(board, column):
         row = get_row(board, column)
         make_move(board, row, column, computer_chip)   
@@ -277,7 +275,6 @@ def start_game():
                 else:
                     computer_move()
                 turns += 1
-                print(f"turns is {turns}")
 
         except:
             print(" Incorrect entry:\n")
@@ -327,7 +324,6 @@ def print_slow(str):
         sys.stdout.write(letter)
         sys.stdout.flush()
         time.sleep(0.05)
-        # time.sleep(0.0001)
 
 
 if __name__ == '__main__':
