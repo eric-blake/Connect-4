@@ -5,8 +5,6 @@ import os
 
 BOARD_COLS = 7
 BOARD_ROWS = 6
-#turns = 0
-
 
 
 def welcome():
@@ -40,9 +38,6 @@ def make_board():
     board = [[" " for column in range(BOARD_COLS)]
              for row in range(BOARD_ROWS)]
     return board
-
-
-
 
 
 def print_board():
@@ -106,7 +101,6 @@ def computer_chip_color():
     return computer_chip
 
 
-
 def check_if_winner():
     """Check if four in a row and return winner"""
     # Check horizontal axis for winner
@@ -117,9 +111,9 @@ def check_if_winner():
                     and board[row][column + 2] == '🟡'
                     and board[row][column + 3] == '🟡'):
                 if player_chip == '🟡':
-                    print(f" Congratulations {name} - You Win!")
+                    print(f" Congratulations {name} - You Win! h")
                 else:
-                    print(f" Hard luck {name} - Computer Wins")
+                    print(f" Hard luck {name} - Computer Wins h")
                 return True
             elif (board[row][column] == '🔴'
                     and board[row][column + 1] == '🔴'
@@ -139,9 +133,9 @@ def check_if_winner():
                     and board[row + 2][column] == '🟡'
                     and board[row + 3][column] == '🟡'):
                 if player_chip == '🟡':
-                    print(f" Congratulations {name} - You Win!")
+                    print(f" Congratulations {name} - You Win! v")
                 else:
-                    print(f" Hard luck {name} - Computer Wins")
+                    print(f" Hard luck {name} - Computer Wins v")
                 return True
             elif (board[row][column] == '🔴'
                     and board[row + 1][column] == '🔴'
@@ -161,9 +155,9 @@ def check_if_winner():
                     and board[row + 2][column + 2] == '🟡'
                     and board[row + 3][column + 3] == '🟡'):
                 if player_chip == '🟡':
-                    print(f" Congratulations {name} - You Win!")
+                    print(f" Congratulations {name} - You Win! d1")
                 else:
-                    print(f" Hard luck {name} - Computer Wins")
+                    print(f" Hard luck {name} - Computer Wins d1")
                 return True
             elif (board[row][column] == '🔴'
                     and board[row + 1][column + 1] == '🔴'
@@ -183,9 +177,9 @@ def check_if_winner():
                     and board[row + 2][column - 2] == '🟡'
                     and board[row + 3][column - 3] == '🟡'):
                 if player_chip == '🟡':
-                    print(f" Congratulations {name} - You Win!")
+                    print(f" Congratulations {name} - You Win! d2")
                 else:
-                    print(f" Hard luck {name} - Computer Wins")
+                    print(f" Hard luck {name} - Computer Wins d2")
                 return True
 
             elif (board[row][column] == '🔴'
@@ -206,6 +200,42 @@ def play_game():
     start_game()
 
 
+def prevent_win():
+    """Checks for three in a row in vertical direction and drops computer chip in fourth slot""" 
+    for row in range(BOARD_ROWS - 3):
+        for column in range(BOARD_COLS):
+            last_row = last_move[0]
+            last_col = last_move[1]
+            if (board[last_row][last_col] == '🟡'
+                and board[row + 1][last_col] == '🟡'
+                and board[row + 2 ][last_col] == '🟡'):
+                if is_valid_move(board, column):
+                    make_move(board, last_row - 1, last_col, '👽')
+                    return True
+                return False
+              
+
+    # for row in range(BOARD_ROWS):
+    #     for column in range(BOARD_COLS - 3):
+    #         last_row = last_move[0]
+    #         last_col = last_move[1]
+    #         if (board[last_row][last_col] == '🟡'
+    #             and board[row][column + 1] == '🟡'
+    #             and board[row][column + 2] == '🟡'):
+    #             if is_valid_move(board, column):
+    #                 make_move(board, last_row, last_col + 1, '👾')
+    #                 return True
+    #             return False
+
+    return False
+
+
+def computer_move():             
+    column = random_number()
+    if is_valid_move(board, column):
+        row = get_row(board, column)
+        make_move(board, row, column, computer_chip)
+
 
 def start_game():
     global board
@@ -224,6 +254,10 @@ def start_game():
                 if is_valid_move(board, column):
                     row = get_row(board, column)
                     make_move(board, row, column, player_chip)
+                    global last_move
+                    last_move = [row, column]
+                    print(last_move)
+                    print(f" player move {turns}")
                     turns += 1
 
             else:
@@ -231,11 +265,13 @@ def start_game():
                 print("\n")
                 # time delay from Stack overflow
                 time.sleep(2)
-                column = random_number()
                 if is_valid_move(board, column):
-                    row = get_row(board, column)
-                    make_move(board, row, column, computer_chip)
-                    turns += 1
+                    if prevent_win():
+                        print(f"stop win {turns}")
+                    else:
+                        computer_move()
+                        print(f"random move {turns}")
+                turns += 1
         
         except:
             print(" Incorrect entry:\n")
