@@ -18,7 +18,7 @@ Connect 4 is a two-player connection rack game. My verison of the game has been 
 * Build a simple, fun and challenging game that will engage the player.
 
 ### Target Audience
-* Anyone with an interest in playing online games
+* Anyone with an interest in playing online games.
 
 ### User goals
 * I want to see clear instructions on how to play this game.
@@ -67,17 +67,16 @@ A flowchart of the game flow and logic was created using Microsoft Visio.  The f
 <img src="assets/documentation/win-game.PNG" alt="Screenshot of win game congratulations message">
 
 * If the user loses a hard luck message will be displayed.
+* If there is no winner a game over - draw message will be displayed.
+* At the end of the game the user will have the option to play again or quit. This is validated to only accept the letters "r" for restart or "q" for quit.
 <img src="assets/documentation/computer-wins.PNG" alt="Screenshot of lose game message">
 
-* If there is no winner a game over - draw message will be displayed.
-<img src="assets/documentation/" alt="Screenshot of flowchart">
 
-* At the end of the game the user will have the option to play again or quit. This is validated to only accept the letters "r" for restart or "q" for quit.
-<img src="assets/documentation/" alt="Screenshot of flowchart">
+
 
 
 ### Future Features
-* Allow player to select the board size by inputting the number of rows and columns
+* Allow player to select the board size by inputting the number of rows and columns.
 
 ## Technologies Used
 
@@ -85,16 +84,16 @@ A flowchart of the game flow and logic was created using Microsoft Visio.  The f
 The only coding laugauge used in this project was Python3.
 
 ### External resources:
-* Microsoft Visio was used for the Flowchart
+* Microsoft Visio was used for the Flowchart.
 * Heroku: Heroku is used to deploy the programme in the form of an app. This is supported by the Code Institute template that allows a python terminal to be run using a web page.
 * Codeanywhere was used as the IDE to code the website.
 * Code Institute template - To run the game in the terminal using Heroku.
 
 ### Libraries Used
-(random) was used to generate column number for the computers move
-(time) was used to puase between player move and computer move
-(sys) wasused for the print slow function
-(os) was used for the clear function
+(random) was used to generate column number for the computers move.
+(time) was used to puase between player move and computer move.
+(sys) wasused for the print slow function.
+(os) was used for the clear function.
 
 
 ## Testing:
@@ -137,8 +136,8 @@ No unfixed bugs
     * Go to support dependencies and select Add Buildpack.
     * The order of the buildpacks is important. Select Python first, then save changes. Then add Node.js second and save changes. If they are not in this order, you can drag them to rearrange them.
     * Add config VAR - key is PORT and the value is 8000
-    * Go to Deploy tab and select deployment method - Github, then click connect
-    * Enable automatic deploy so Heroku updates app everytime changes pushed to Github
+    * Go to Deploy tab and select deployment method - Github, then click connect.
+    * Enable automatic deploy so Heroku updates app everytime changes pushed to Github.
     * Click on View button to take you to your deployed link.
 
 ### Cloning the repository
@@ -151,17 +150,17 @@ The repository was cloned to my local PC. The steps to clone are as follows.
 * Press enter to create the local clone.
 
 ### Forking the repository
-By forking the repository, you can make a copy of the repository and make changes without affecting the original repository. the steps to fork are as follows
+By forking the repository, you can make a copy of the repository and make changes without affecting the original repository. the steps to fork are as follows:
 * Locate the repository in Github.
 * On the top right corner of the page click Fork.
-* A copy of the repository will now be created in your own repository
+* A copy of the repository will now be created in your own repository.
 
 ## Credits
  * Instructions throughout project was taken from [Code Institute](https://codeinstitute.net/ie/ "Code Institute") Tutorials and Love Sandwiches project.
- * The flowchart was created using Microsoft Visio
+ * The flowchart was created using Microsoft Visio.
  * The Favicon was taken from [Icons8](https://icons8.com/ "Icons8").
- * isalpha method from stack overflow  [Stack overflow](https://stackoverflow.com/  "Stack overflow")
- * Details of Connect-4 game [Wikipedia](https://en.wikipedia.org/wiki/Connect_Four "Wikipedia")
+ * isalpha method from stack overflow  [Stack overflow](https://stackoverflow.com/  "Stack overflow").
+ * Details of Connect-4 game [Wikipedia](https://en.wikipedia.org/wiki/Connect_Four "Wikipedia").
 
 ## Acknowledgements
-*  Mitko Bachvarov. My mentor who provided me with advice and feedback throughout this project
+*  Mitko Bachvarov. My mentor who provided me with advice and feedback throughout this project.
