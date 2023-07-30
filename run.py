@@ -24,10 +24,13 @@ def welcome():
     while not name.isalpha() or len(name) < 2:
         print("invalid name, please enter 2 or more letters only \n")
         name = input("Please enter your name \n")
-    print_slow(f"Hello {name}, you will be playing against the computer. Take turns dropping \ncolored tokens \n")
+    print_slow(f"Hello {name}, you will be playing against the computer."
+               "Take turns dropping \ncolored tokens \n")
     print("\n")
     time.sleep(1)
-    print_slow("The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of your own tokens")
+    print_slow(f"The objective of the game is to be the first to form a "
+               "horizontal, vertical, or diagonal line of four of "
+               "your own tokens")
     print("\n")
     time.sleep(1)
     return name
@@ -80,7 +83,8 @@ def player_chip_color():
     player_chip = input("Please type y for yellow chip or r for red chip \n")
     while player_chip != "y" and player_chip != "r":
         print("Invalid choice")
-        player_chip = input('Please type "y" for yellow chip or "r" for red chip \n')
+        player_chip = input('Please type "y" for yellow chip or '
+                            '"r" for red chip \n')
     if player_chip == 'r':
         player_chip = '🔴'
         print("\n")
@@ -201,36 +205,36 @@ def play_game():
 
 
 def prevent_win():
-    """Checks for three in a row in vertical direction and drops computer chip in fourth slot""" 
+    """Checks for three in a row in vertical direction and
+    drops computer chip in fourth slot"""
     for row in range(BOARD_ROWS - 3):
         for column in range(BOARD_COLS):
             last_row = last_move[0]
             last_col = last_move[1]
             if (board[last_row][last_col] == '🟡'
                 and board[row + 1][last_col] == '🟡'
-                and board[row + 2 ][last_col] == '🟡'):
+                    and board[row + 2][last_col] == '🟡'):
                 if is_valid_move(board, column):
-                    make_move(board, last_row - 1, last_col, '👽')
+                    make_move(board, last_row - 1, last_col, '🔴')
                     return True
                 return False
-              
 
-    # for row in range(BOARD_ROWS):
-    #     for column in range(BOARD_COLS - 3):
-    #         last_row = last_move[0]
-    #         last_col = last_move[1]
-    #         if (board[last_row][last_col] == '🟡'
-    #             and board[row][column + 1] == '🟡'
-    #             and board[row][column + 2] == '🟡'):
-    #             if is_valid_move(board, column):
-    #                 make_move(board, last_row, last_col + 1, '👾')
-    #                 return True
-    #             return False
+    for row in range(BOARD_ROWS - 3):
+        for column in range(BOARD_COLS):
+            last_row = last_move[0]
+            last_col = last_move[1]
+            if (board[last_row][last_col] == '🔴'
+                and board[row + 1][last_col] == '🔴'
+                    and board[row + 2][last_col] == '🔴'):
+                if is_valid_move(board, column):
+                    make_move(board, last_row - 1, last_col, '🟡')
+                    return True
+                return False
 
     return False
 
 
-def computer_move():             
+def computer_move():
     column = random_number()
     if is_valid_move(board, column):
         row = get_row(board, column)
@@ -249,8 +253,8 @@ def start_game():
     while not game_over:
         try:
             if turns % 2 == 0:
-                column = (int(input
-                             (f" Please choose a column (1-{BOARD_COLS}): \n")) -1)
+                column = (int(input(f" Please choose a column "
+                                    "(1-{BOARD_COLS}): \n")) - 1)
                 if is_valid_move(board, column):
                     row = get_row(board, column)
                     make_move(board, row, column, player_chip)
@@ -272,7 +276,7 @@ def start_game():
                         computer_move()
                         print(f"random move {turns}")
                 turns += 1
-        
+
         except:
             print(" Incorrect entry:\n")
         game_over = check_if_winner()
@@ -282,8 +286,8 @@ def start_game():
         if not any(' ' in row for row in board):
             print("Game over - Draw")
             return
-        
-    
+
+
 def restart_game():
     """Restarts the game or quits the game"""
     restart = input("Press r to restart game or q to quit \n")
@@ -321,8 +325,8 @@ def print_slow(str):
         sys.stdout.write(letter)
         sys.stdout.flush()
         time.sleep(0.05)
-        #time.sleep(0.0001)
+        # time.sleep(0.0001)
 
 
-if __name__== '__main__':
+if __name__ == '__main__':
     play_game()
