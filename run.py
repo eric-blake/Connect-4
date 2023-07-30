@@ -115,9 +115,9 @@ def check_if_winner():
                     and board[row][column + 2] == '🟡'
                     and board[row][column + 3] == '🟡'):
                 if player_chip == '🟡':
-                    print(f" Congratulations {name} - You Win! h")
+                    print(f" Congratulations {name} - You Win!")
                 else:
-                    print(f" Hard luck {name} - Computer Wins h")
+                    print(f" Hard luck {name} - Computer Wins!")
                 return True
             elif (board[row][column] == '🔴'
                     and board[row][column + 1] == '🔴'
@@ -126,7 +126,7 @@ def check_if_winner():
                 if player_chip == '🔴':
                     print(f" Congratulations {name} - You Win!")
                 else:
-                    print(f" Hard luck {name} - Computer Wins")
+                    print(f" Hard luck {name} - Computer Wins!")
                 return True
 
     # Check vertical axis for winner
@@ -137,9 +137,9 @@ def check_if_winner():
                     and board[row + 2][column] == '🟡'
                     and board[row + 3][column] == '🟡'):
                 if player_chip == '🟡':
-                    print(f" Congratulations {name} - You Win! v")
+                    print(f" Congratulations {name} - You Win!")
                 else:
-                    print(f" Hard luck {name} - Computer Wins v")
+                    print(f" Hard luck {name} - Computer Wins!")
                 return True
             elif (board[row][column] == '🔴'
                     and board[row + 1][column] == '🔴'
@@ -148,7 +148,7 @@ def check_if_winner():
                 if player_chip == '🔴':
                     print(f" Congratulations {name} - You Win!")
                 else:
-                    print(f" Hard luck {name} - Computer Wins")
+                    print(f" Hard luck {name} - Computer Wins!")
                 return True
 
     # Check diagonal-right grid for winner
@@ -159,9 +159,9 @@ def check_if_winner():
                     and board[row + 2][column + 2] == '🟡'
                     and board[row + 3][column + 3] == '🟡'):
                 if player_chip == '🟡':
-                    print(f" Congratulations {name} - You Win! d1")
+                    print(f" Congratulations {name} - You Win!")
                 else:
-                    print(f" Hard luck {name} - Computer Wins d1")
+                    print(f" Hard luck {name} - Computer Wins!")
                 return True
             elif (board[row][column] == '🔴'
                     and board[row + 1][column + 1] == '🔴'
@@ -181,9 +181,9 @@ def check_if_winner():
                     and board[row + 2][column - 2] == '🟡'
                     and board[row + 3][column - 3] == '🟡'):
                 if player_chip == '🟡':
-                    print(f" Congratulations {name} - You Win! d2")
+                    print(f" Congratulations {name} - You Win!")
                 else:
-                    print(f" Hard luck {name} - Computer Wins d2")
+                    print(f" Hard luck {name} - Computer Wins!")
                 return True
 
             elif (board[row][column] == '🔴'
@@ -193,7 +193,7 @@ def check_if_winner():
                 if player_chip == '🔴':
                     print(f" Congratulations {name} - You Win!")
                 else:
-                    print(f" Hard luck {name} - Computer Wins")
+                    print(f" Hard luck {name} - Computer Wins!")
                 return True
 
     return False
@@ -260,21 +260,18 @@ def start_game():
                     make_move(board, row, column, player_chip)
                     global last_move
                     last_move = [row, column]
-                    print(last_move)
-                    print(f" player move {turns}")
                     turns += 1
 
             else:
                 print("Computers move next - Please wait")
                 print("\n")
                 # time delay from Stack overflow
-                time.sleep(2)
+                time.sleep(1)
                 if is_valid_move(board, column):
                     if prevent_win():
-                        print(f"stop win {turns}")
+                        prevent_win()
                     else:
                         computer_move()
-                        print(f"random move {turns}")
                 turns += 1
 
         except:
