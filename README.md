@@ -22,7 +22,7 @@ Connect 4 is a two-player connection rack game. My verison of the game has been 
 
 ### User goals
 * I want to see clear instructions on how to play this game.
-* I want easily navigate through the application.
+* I want to easily navigate through the application.
 * I want to get feedback on my actions in the game.
 * I want to re-start the game quickly without having to go through how-to-play instructions again.
 
@@ -34,7 +34,7 @@ Connect 4 is a two-player connection rack game. My verison of the game has been 
 ## UX design:
 
 ### Wireframe
-As this is a Python terminal game, a wireframe was not demmed necessary.
+As this is a Python terminal game, a wireframe was not deemed necessary.
 
 ### Structure & Logical Flow
 A flowchart of the game flow and logic was created using Microsoft Visio.  The flow charts shows how the game will flow and allows consideration for the inputs, outputs and validation required.
@@ -49,7 +49,7 @@ A flowchart of the game flow and logic was created using Microsoft Visio.  The f
 ### Existing Features
 
 #### Welcome page
-* The first section is welcoming the user to the quiz and requesting a username. This is validated so that the username msut be two or more letters.
+* The first section is welcoming the user to the quiz and requesting a username. This is validated so that the username must be two or more letters.
 <img src="assets/documentation/welcome-screen.PNG" alt="Screenshot of welcome page">
 
 #### Instructions
@@ -59,11 +59,11 @@ A flowchart of the game flow and logic was created using Microsoft Visio.  The f
 * The user is then prompted to enter a column number between 1 and 7. This is validated to only accept number between 1 and 7.
 <img src="assets/documentation/select-column.PNG" alt="Screenshot of select column instruction">
 
-* After selecting a number the chip will be dropped in the board and the board re-printed.
+* After selecting a number, the chip will be dropped in the board and the board re-printed.
 * The computer then selects a column at random and drops a chip.
 <img src="assets/documentation/drop-chip.PNG" alt="Screenshot of drop chip in board">
 
-* If the user wins a congratulation message will be displayed.
+* If the user wins a congratulations message will be displayed.
 <img src="assets/documentation/win-game.PNG" alt="Screenshot of win game congratulations message">
 
 * If the user loses a hard luck message will be displayed.
@@ -81,18 +81,18 @@ A flowchart of the game flow and logic was created using Microsoft Visio.  The f
 ## Technologies Used
 
 ### Coding languages used
-The only coding laugauge used in this project was Python3.
+The only coding language used in this project was Python3.
 
 ### External resources:
 * Microsoft Visio was used for the Flowchart.
 * Heroku: Heroku is used to deploy the programme in the form of an app. This is supported by the Code Institute template that allows a python terminal to be run using a web page.
-* Codeanywhere was used as the IDE to code the website.
+* Code Anywhere was used as the IDE to code the website.
 * Code Institute template - To run the game in the terminal using Heroku.
 
 ### Libraries Used
 (random) was used to generate column number for the computers move.
-(time) was used to puase between player move and computer move.
-(sys) wasused for the print slow function.
+(time) was used to pause between player move and computer move.
+(sys) was used for the print slow function.
 (os) was used for the clear function.
 
 
@@ -103,7 +103,7 @@ The only coding laugauge used in this project was Python3.
 | ------------- | ------------- |
 | The welcome page and quiz page and are all readable and easy to understand  | Pass |
 | If no username or invalid username is entered an invalid username message is displayed   |Pass  | 
-| If no chip colour or invlaid letter is selected an invalid choice message is displayed   |Pass  | 
+| If no chip colour or invalid letter is selected an invalid choice message is displayed   |Pass  | 
 | When game begins the empty board is displayed   |Pass   | 
 | When the user selects a column number the chip is dropped in correct column  |Pass   | 
 | The turns are incremented correctly | Pass  | 
@@ -137,7 +137,7 @@ No unfixed bugs
     * The order of the buildpacks is important. Select Python first, then save changes. Then add Node.js second and save changes. If they are not in this order, you can drag them to rearrange them.
     * Add config VAR - key is PORT and the value is 8000
     * Go to Deploy tab and select deployment method - Github, then click connect.
-    * Enable automatic deploy so Heroku updates app everytime changes pushed to Github.
+    * Enable automatic deploy so Heroku updates app each time changes are pushed to Github.
     * Click on View button to take you to your deployed link.
 
 ### Cloning the repository
