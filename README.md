@@ -121,6 +121,7 @@ The only coding language used in this project was Python3.
 | ------------- | ------------- |
 | Issue with first row showing on top of board instead of bottom  | Updated get_row function so that it goes to first row 0, and subtracts 1 every loop |
 | Turns was not resetting to zero after game restarted  | Added game = 0 to start game function|
+| If random number generated for computer move was a column that was full, then no move would be made  | Added loop to computer move function to keep generating random numbers until it finds an available column |
 
 
 * ### Unfixed Bugs
