@@ -113,7 +113,7 @@ The only coding laugauge used in this project was Python3.
 
 ### Validator Testing:
  * No errors were returned when passing through the PEP8 validator. 
-    <img src="assets/documentation/" alt="Screenshot of PEP8 Validator results">
+    <img src="assets/documentation/pep8 validator.PNG" alt="Screenshot of PEP8 Validator results">
 
 ## Bugs
 * ### Fixed bugs
