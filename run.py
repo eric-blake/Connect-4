@@ -284,7 +284,7 @@ def start_game():
             restart_game()
 
         if not any(' ' in row for row in board):
-            print("Game over - Draw")
+            print("Game over - Draw game")
             return
 
 
