@@ -79,6 +79,7 @@ def make_move(board, row, column, chip):
 
 
 def player_chip_color():
+    """Sets the player chip colour based on user input"""
     global player_chip
     player_chip = input("Please type y for yellow chip or r for red chip \n")
     while player_chip != "y" and player_chip != "r":
@@ -97,6 +98,7 @@ def player_chip_color():
 
 
 def computer_chip_color():
+    """Sets the computer chip colour based on user selection"""
     global computer_chip
     if player_chip == '🔴':
         computer_chip = '🟡'
@@ -200,6 +202,8 @@ def check_if_winner():
 
 
 def play_game():
+    """Calls the wecome messaage and starts the game, 
+    this function is not called if the user restarts the game"""
     welcome()
     start_game()
 
@@ -235,6 +239,7 @@ def prevent_win():
 
 
 def computer_move():
+    """Gets random number and checks columns for free space, then drops chip"""
     column = random_number()
     if is_valid_move(board, column):
         row = get_row(board, column)
@@ -245,6 +250,7 @@ def computer_move():
 
 
 def start_game():
+    """This is the main start game function"""
     global board
     global turns
     turns = 0
