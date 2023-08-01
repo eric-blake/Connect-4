@@ -158,7 +158,7 @@ By forking the repository, you can make a copy of the repository and make change
  * Instructions throughout project was taken from [Code Institute](https://codeinstitute.net/ie/ "Code Institute") Tutorials and Love Sandwiches project.
  * The flowchart was created using Microsoft Visio.
  * The Favicon was taken from [Icons8](https://icons8.com/ "Icons8").
- * isalpha method from stack overflow  [Stack overflow](https://stackoverflow.com/  "Stack overflow").
+ * isalpha method, time delay, clear, print slow from stack overflow  [Stack overflow](https://stackoverflow.com/  "Stack overflow").
  * Details of Connect-4 game [Wikipedia](https://en.wikipedia.org/wiki/Connect_Four "Wikipedia").
 
 
