@@ -7,27 +7,6 @@ BOARD_COLS = 7
 BOARD_ROWS = 6
 
 
-class Board ():
-    def __init__(self):
-        self.board = [[" " for column in range(BOARD_COLS)]
-                for row in range(BOARD_ROWS)]
-        #return board
-
-
-    def print_board(self):
-        """Print out board grid using bars and dashed line"""
-        for column in range(BOARD_COLS):
-            print(f"   {column + 1}  ", end="")
-        for row in range(BOARD_ROWS):
-            print(f" \n {'-' * (BOARD_COLS * 6)}")
-            print('|', end="")
-            for column in range(BOARD_COLS):
-                print(f" {self.board[row][column]}   |", end="")
-        print(f" \n {'-' * (BOARD_COLS * 6)}")
-        print("\n")
-        #return board
-
-
 def welcome():
     """Prints the welcome message and prompts the user for their name"""
     try:
@@ -55,6 +34,27 @@ def welcome():
     print("\n")
     time.sleep(1)
     return name
+
+
+def make_board():
+    """Sets the board size"""
+    board = [[" " for column in range(BOARD_COLS)]
+             for row in range(BOARD_ROWS)]
+    return board
+
+
+def print_board():
+    """Print out board grid using bars and dashed line"""
+    for column in range(BOARD_COLS):
+        print(f"   {column + 1}  ", end="")
+    for row in range(BOARD_ROWS):
+        print(f" \n {'-' * (BOARD_COLS * 6)}")
+        print('|', end="")
+        for column in range(BOARD_COLS):
+            print(f" {board[row][column]}   |", end="")
+    print(f" \n {'-' * (BOARD_COLS * 6)}")
+    print("\n")
+    return board
 
 
 def is_valid_move(board, column):
@@ -200,7 +200,7 @@ def check_if_winner():
 
 
 def play_game():
-    # welcome()
+    welcome()
     start_game()
 
 
@@ -211,11 +211,11 @@ def prevent_win():
         for column in range(BOARD_COLS):
             last_row = last_move[0]
             last_col = last_move[1]
-            if (self.board[last_row][last_col] == '🟡'
-                and self.board[row + 1][last_col] == '🟡'
-                    and self.board[row + 2][last_col] == '🟡'):
+            if (board[last_row][last_col] == '🟡'
+                and board[row + 1][last_col] == '🟡'
+                    and board[row + 2][last_col] == '🟡'):
                 if is_valid_move(board, column):
-                    make_move(board, last_row - 1, last_col, '🤢')
+                    make_move(board, last_row - 1, last_col, '🔴')
                     return True
                 return False
 
@@ -248,7 +248,7 @@ def start_game():
     global board
     global turns
     turns = 0
-    board = Board()
+    board = make_board()
     player_chip_color()
     computer_chip_color()
     print_board()
