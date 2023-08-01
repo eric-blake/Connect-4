@@ -202,7 +202,7 @@ def check_if_winner():
 
 
 def play_game():
-    """Calls the wecome messaage and starts the game, 
+    """Calls the wecome messaage and starts the game,
     this function is not called if the user restarts the game"""
     welcome()
     start_game()
@@ -243,7 +243,7 @@ def computer_move():
     column = random_number()
     if is_valid_move(board, column):
         row = get_row(board, column)
-        make_move(board, row, column, computer_chip)   
+        make_move(board, row, column, computer_chip)
 
     else:
         computer_move()
@@ -270,7 +270,6 @@ def start_game():
                     global last_move
                     last_move = [row, column]
                     turns += 1
-            
             else:
                 print("Computers move next - Please wait")
                 print("\n")
@@ -282,7 +281,7 @@ def start_game():
                     computer_move()
                 turns += 1
 
-        except:
+        except Exception:
             print(" Incorrect entry:\n")
         game_over = check_if_winner()
         if game_over:
