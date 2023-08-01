@@ -1,7 +1,5 @@
 # Connect-4
 
-<img src="" alt="Screenshot from http://ami.responsivedesign.is/ website, that show how the website looks on commons screen sizes">
-
 ## How to play:
 Connect 4 is a Python terminal game, which runs in the Code Institute mock terminal on Heroku.
 
@@ -56,7 +54,7 @@ A flowchart of the game flow and logic was created using Microsoft Visio.  The f
 * The next section gives the user information and instructions on how to play the game. The user must select a chip colour - "y" for yellow or "r" for red.
 <img src="assets/documentation/instructions.PNG" alt="Screenshot of instructions">
 
-* The user is then prompted to enter a column number between 1 and 7. This is validated to only accept number between 1 and 7.
+* The user is then prompted to enter a column number between 1 and 7. This is validated to only accept numbers between 1 and 7.
 <img src="assets/documentation/select-column.PNG" alt="Screenshot of select column instruction">
 
 * After selecting a number, the chip will be dropped in the board and the board re-printed.
@@ -70,9 +68,6 @@ A flowchart of the game flow and logic was created using Microsoft Visio.  The f
 * If there is no winner a game over - draw message will be displayed.
 * At the end of the game the user will have the option to play again or quit. This is validated to only accept the letters "r" for restart or "q" for quit.
 <img src="assets/documentation/computer-wins.PNG" alt="Screenshot of lose game message">
-
-
-
 
 
 ### Future Features
@@ -90,10 +85,10 @@ The only coding language used in this project was Python3.
 * Code Institute template - To run the game in the terminal using Heroku.
 
 ### Libraries Used
-(random) was used to generate column number for the computers move.
-(time) was used to pause between player move and computer move.
-(sys) was used for the print slow function.
-(os) was used for the clear function.
+* (random) was used to generate column number for the computers move.
+* (time) was used to pause between player move and computer move.
+* (sys) was used for the print slow function.
+* (os) was used for the clear function.
 
 
 ## Testing:
