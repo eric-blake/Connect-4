@@ -2,6 +2,7 @@
 
 ## How to play:
 Connect 4 is a Python terminal game, which runs in the Code Institute mock terminal on Heroku.
+<img src="assets/documentation/connect-4.PNG" alt="Screenshot of connect-4 game">
 
 Connect 4 is a two-player connection rack game. My verison of the game has been modified in to a one player game, where the player plays against the computer. The player take turns dropping colored tokens into a six-row, seven-column vertically suspended grid. The pieces fall straight down, occupying the lowest available space within the column. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own tokens. You can read more about it on [Wikipedia](https://en.wikipedia.org/wiki/Connect_Four "Wikipedia")
 
@@ -108,7 +109,7 @@ The only coding language used in this project was Python3.
 
 ### Validator Testing:
  * No errors were returned when passing through the PEP8 validator. 
-    <img src="assets/documentation/pep8 validator.PNG" alt="Screenshot of PEP8 Validator results">
+    <img src="assets/documentation/pep8-validator.PNG" alt="Screenshot of PEP8 Validator results">
 
 ## Bugs
 * ### Fixed bugs
