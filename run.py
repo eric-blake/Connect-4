@@ -38,6 +38,7 @@ def welcome():
 
 def make_board():
     """Sets the board size"""
+    # how to create a 2D array from www.geeksforgeeks.org
     board = [[" " for column in range(BOARD_COLS)]
              for row in range(BOARD_ROWS)]
     return board
@@ -203,7 +204,7 @@ def check_if_winner():
 
 
 def play_game():
-    """Calls the wecome messaage and starts the game,
+    """Calls the welcome messaage and starts the game,
     this function is not called if the user restarts the game"""
     welcome()
     start_game()

@@ -160,7 +160,8 @@ By forking the repository, you can make a copy of the repository and make change
  * The Favicon was taken from [Icons8](https://icons8.com/ "Icons8").
  * isalpha method, time delay, clear, print slow from stack overflow  [Stack overflow](https://stackoverflow.com/  "Stack overflow").
  * Details of Connect-4 game [Wikipedia](https://en.wikipedia.org/wiki/Connect_Four "Wikipedia").
-
+ * How to create a 2d array from [GeeksforGeeks](https://www.geeksforgeeks.org/python-using-2d-arrays-lists-the-right-way/ "GeeksforGeeks").
+ * Title art generator [Patorjk]( https://patorjk.com/software/taag/#p=display&f=Big&t=Connect%204 "Patorjk").
 
 ## Acknowledgements
 *  Mitko Bachvarov. My mentor who provided me with advice and feedback throughout this project.
