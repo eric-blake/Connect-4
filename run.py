@@ -81,11 +81,12 @@ def make_move(board, row, column, chip):
 def player_chip_color():
     """Sets the player chip colour based on user input"""
     global player_chip
-    player_chip = input("Please type y for yellow chip or r for red chip \n")
+    player_chip = input("Please type y for yellow chip or "
+                        "r for red chip \n").lower()
     while player_chip != "y" and player_chip != "r":
         print("Invalid choice")
         player_chip = input('Please type "y" for yellow chip or '
-                            '"r" for red chip \n')
+                            '"r" for red chip \n').lower()
     if player_chip == 'r':
         player_chip = '🔴'
         print("\n")
@@ -294,10 +295,10 @@ def start_game():
 
 def restart_game():
     """Restarts the game or quits the game"""
-    restart = input("Press r to restart game or q to quit \n")
+    restart = input("Press r to restart game or q to quit \n").lower()
     while restart != "r" and restart != "q":
         print("Invalid choice")
-        restart = input("Press r to restart game or q to quit \n")
+        restart = input("Press r to restart game or q to quit \n").lower()
     if restart == "r":
         clear()
         board.clear()
