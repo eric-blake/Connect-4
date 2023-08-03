@@ -266,6 +266,9 @@ def start_game():
             if turns % 2 == 0:
                 column = (int(input(f" Please choose a column"
                                     f"(1-{BOARD_COLS}): \n")) - 1)
+                if column < 0 or column > 7:
+                    raise ValueError
+
                 if is_valid_move(board, column):
                     row = get_row(board, column)
                     make_move(board, row, column, player_chip)
