@@ -4,7 +4,7 @@
 Connect 4 is a Python terminal game, which runs in the Code Institute mock terminal on Heroku.
 <img src="assets/documentation/connect-4.PNG" alt="Screenshot of connect-4 game">
 
-Connect 4 is a two-player connection rack game. My verison of the game has been modified in to a one player game, where the player plays against the computer. The player take turns dropping colored tokens into a six-row, seven-column vertically suspended grid. The pieces fall straight down, occupying the lowest available space within the column. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own tokens. You can read more about it on [Wikipedia](https://en.wikipedia.org/wiki/Connect_Four "Wikipedia")
+Connect 4 is a two-player connection rack game. My version of the game has been modified in to a one player game, where the player plays against the computer. The player takes turns dropping coloured tokens into a six-row, seven-column vertically suspended grid. The pieces fall straight down, occupying the lowest available space within the column. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own tokens. You can read more about it on [Wikipedia](https://en.wikipedia.org/wiki/Connect_Four "Wikipedia")
 
 -By Eric Blake
 
@@ -73,6 +73,8 @@ A flowchart of the game flow and logic was created using Microsoft Visio.  The f
 
 ### Future Features
 * Allow player to select the board size by inputting the number of rows and columns.
+* Add a multiplayer feature.
+* Add a leader board with top scores get stored in google sheets.
 
 ## Technologies Used
 
@@ -98,14 +100,19 @@ The only coding language used in this project was Python3.
 | Test | Result |
 | ------------- | ------------- |
 | The welcome page and quiz page and are all readable and easy to understand  | Pass |
-| If no username or invalid username is entered an invalid username message is displayed   |Pass  | 
-| If no chip colour or invalid letter is selected an invalid choice message is displayed   |Pass  | 
+| User name is validated, if no username or invalid username is entered a warning message is displayed   |Pass  | 
+| Chip colour selected is validated. If no chip colour or invalid character is selected a warning message is displayed   |Pass  | 
 | When game begins the empty board is displayed   |Pass   | 
 | When the user selects a column number the chip is dropped in correct column  |Pass   | 
-| The turns are incremented correctly | Pass  | 
+| Colum selected is validated. If incorrect column number is selected a warning message is displayed |Pass   | 
+| If the column selected is full a warning message is displayed |Pass   | 
+| The turns are incremented correctly  | Pass  | 
 | The check winner function works in vertical, horizontal and diagonal directions  | Pass  |  
 | When the user selects play again the game restarts  | Pass  | 
 | When the user selects quit game the game quits  | Pass  | 
+| Play again and restart is validated. If invalid character is selected a warning message is displayed   | Pass  | 
+| The lower() method is working correctly in the player chip colour and restart functions |Pass   | 
+
 
 ### Validator Testing:
  * No errors were returned when passing through the PEP8 validator. 
