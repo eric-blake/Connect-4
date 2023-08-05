@@ -275,7 +275,8 @@ def start_game():
                     last_move = [row, column]
                     turns += 1
                 else:
-                    print("Column is full \n")
+                    print(f"Column {column +1} is full,"
+                        " please select a different column \n")
 
             else:
                 print("Computers move next - Please wait")
