@@ -21,7 +21,7 @@ def welcome():
     name = input("Please enter your name \n")
     print("\n")
     # isalpha method from stack overflow
-    while not name.isalpha() or len(name) < 2 or len(name) > 15 :
+    while not name.isalpha() or len(name) < 2 or len(name) > 15:
         print("Invalid name, please enter 2 to 15 letters only \n")
         name = input("Please enter your name \n")
     print_slow(f"Hello {name}, you will be playing against the computer."
@@ -313,10 +313,9 @@ def restart_game():
         start_game()
 
     else:
-        print("Game over \n")
+        print("\n")
+        print_slow("Game over \n")
         sys.exit()
-
-        
 
 
 # clear function from Stackoverflow
