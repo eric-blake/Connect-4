@@ -3,7 +3,7 @@
 ## How to play:
 Connect 4 is a Python terminal game, which runs in the Code Institute mock terminal on Heroku.
 
-<img src="assets/documentation/connect-4.PNG" alt="Screenshot of connect-4 game">
+'![Screenshot of connect-4 game](assets/documentation/connect-4.PNG)'
 
 Connect 4 is a two-player connection rack game. My version of the game has been modified in to a one player game, where the player plays against the computer. The player takes turns dropping coloured tokens into a six-row, seven-column vertically suspended grid. The pieces fall straight down, occupying the lowest available space within the column. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own tokens. You can read more about it on [Wikipedia](https://en.wikipedia.org/wiki/Connect_Four "Wikipedia")
 
@@ -38,7 +38,7 @@ As this is a Python terminal game, a wireframe was not deemed necessary.
 
 ### Structure & Logical Flow
 A flowchart of the game flow and logic was created using Microsoft Visio. The flow charts shows how the game will flow and allows consideration for the inputs, outputs and validation required.
-<img src="assets/documentation/flow-chart.PNG" alt="Screenshot of flowchart">
+'![Screenshot of flowchart](assets/documentation/flow-chart.PNG)'
 
 ### Colour Scheme
 * The game chip colours of red and yellow are used. This is the standard colour scheme for the Connect 4 game.
@@ -50,26 +50,32 @@ A flowchart of the game flow and logic was created using Microsoft Visio. The fl
 
 #### Welcome page
 * The first section is welcoming the user to the quiz and requesting a username. This is validated so that the username must be two or more letters.
-<img src="assets/documentation/welcome-screen.PNG" alt="Screenshot of welcome page">
+
+'![Screenshot of welcome page"](assets/documentation/welcome-screen.PNG)
 
 #### Instructions
 * The next section gives the user information and instructions on how to play the game. The user must select a chip colour, "y" for yellow or "r" for red.
-<img src="assets/documentation/instructions.PNG" alt="Screenshot of instructions">
+
+'![Screenshot of instructions](assets/documentation/instructions.PNG)'
 
 * The user is then prompted to enter a column number between 1 and 7. This is validated to only accept numbers between 1 and 7.
-<img src="assets/documentation/select-column.PNG" alt="Screenshot of select column instruction">
+
+'![Screenshot of select column instruction](assets/documentation/select-column.PNG)'
 
 * After selecting a number, the chip will be dropped in the board and the board re-printed.
 * The computer then selects a column at random and drops a chip.
-<img src="assets/documentation/drop-chip.PNG" alt="Screenshot of drop chip in board">
+
+'![Screenshot of drop chip in board"](assets/documentation/drop-chip.PNG)'
 
 * If the user wins a congratulations message will be displayed.
-<img src="assets/documentation/win-game.PNG" alt="Screenshot of win game congratulations message">
+
+'![Screenshot of win game congratulations message](assets/documentation/win-game.PNG)
 
 * If the user loses a hard luck message will be displayed.
 * If there is no winner a game over - draw message will be displayed.
 * At the end of the game the user will have the option to play again or quit. This is validated to only accept the letters "r" for restart or "q" for quit.
-<img src="assets/documentation/computer-wins.PNG" alt="Screenshot of lose game message">
+
+'![Screenshot of lose game message](assets/documentation/computer-wins.PNG)'
 
 
 ### Future Features
@@ -117,7 +123,7 @@ The only coding language used in this project was Python3.
 
 ### Validator Testing:
  * No errors were returned when passing through the PEP8 validator. 
-    <img src="assets/documentation/pep8-validator.PNG" alt="Screenshot of PEP8 Validator results">
+'![Screenshot of PEP8 Validator results](assets/documentation/pep8-validator.PNG)'
 
 ## Bugs
 * ### Fixed bugs
