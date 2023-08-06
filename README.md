@@ -36,7 +36,7 @@ Connect 4 is a two-player connection rack game. My version of the game has been 
 As this is a Python terminal game, a wireframe was not deemed necessary.
 
 ### Structure & Logical Flow
-A flowchart of the game flow and logic was created using Microsoft Visio.  The flow charts shows how the game will flow and allows consideration for the inputs, outputs and validation required.
+A flowchart of the game flow and logic was created using Microsoft Visio. The flow charts shows how the game will flow and allows consideration for the inputs, outputs and validation required.
 <img src="assets/documentation/flow-chart.PNG" alt="Screenshot of flowchart">
 
 ### Colour Scheme

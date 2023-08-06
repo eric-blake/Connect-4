@@ -22,7 +22,7 @@ def welcome():
     print("\n")
     # isalpha method from stack overflow
     while not name.isalpha() or len(name) < 2:
-        print("invalid name, please enter 2 or more letters only \n")
+        print("Invalid name, please enter 2 or more letters only \n")
         name = input("Please enter your name \n")
     print_slow(f"Hello {name}, you will be playing against the computer."
                " Take turns dropping \ncolored tokens \n")
@@ -86,8 +86,8 @@ def player_chip_color():
                         "(R) for red chip \n").lower()
     while player_chip != "y" and player_chip != "r":
         print("Invalid choice")
-        player_chip = input('Please type (Y) for yellow chip or '
-                            '(R) for red chip \n').lower()
+        player_chip = input("Please type (Y) for yellow chip or "
+                            "(R) for red chip \n").lower()
     if player_chip == 'r':
         player_chip = '🔴'
         print("\n")
