@@ -2,6 +2,7 @@
 
 ## How to play:
 Connect 4 is a Python terminal game, which runs in the Code Institute mock terminal on Heroku.
+
 <img src="assets/documentation/connect-4.PNG" alt="Screenshot of connect-4 game">
 
 Connect 4 is a two-player connection rack game. My version of the game has been modified in to a one player game, where the player plays against the computer. The player takes turns dropping coloured tokens into a six-row, seven-column vertically suspended grid. The pieces fall straight down, occupying the lowest available space within the column. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own tokens. You can read more about it on [Wikipedia](https://en.wikipedia.org/wiki/Connect_Four "Wikipedia")
@@ -140,7 +141,7 @@ No unfixed bugs
     * Click on Create App.
     * Go to support dependencies and select Add Buildpack.
     * The order of the buildpacks is important. Select Python first, then save changes. Then add Node.js second and save changes. If they are not in this order, you can drag them to rearrange them.
-    * Add config VAR - key is PORT and the value is 8000
+    * Add config VAR - key is PORT and the value is 8000.
     * Go to Deploy tab and select deployment method - Github, then click connect.
     * Enable automatic deploy so Heroku updates app each time changes are pushed to Github.
     * Click on View button to take you to your deployed link.
