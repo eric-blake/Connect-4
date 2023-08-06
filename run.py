@@ -25,7 +25,7 @@ def welcome():
         print("invalid name, please enter 2 or more letters only \n")
         name = input("Please enter your name \n")
     print_slow(f"Hello {name}, you will be playing against the computer."
-               "Take turns dropping \ncolored tokens \n")
+               " Take turns dropping \ncolored tokens \n")
     print("\n")
     time.sleep(1)
     print_slow(f"The objective of the game is to be the first to form a "
@@ -82,12 +82,12 @@ def make_move(board, row, column, chip):
 def player_chip_color():
     """Sets the player chip colour based on user input"""
     global player_chip
-    player_chip = input("Please type y for yellow chip or "
-                        "r for red chip \n").lower()
+    player_chip = input("Please type (Y) for yellow chip or "
+                        "(R) for red chip \n").lower()
     while player_chip != "y" and player_chip != "r":
         print("Invalid choice")
-        player_chip = input('Please type "y" for yellow chip or '
-                            '"r" for red chip \n').lower()
+        player_chip = input('Please type (Y) for yellow chip or '
+                            '(R) for red chip \n').lower()
     if player_chip == 'r':
         player_chip = '🔴'
         print("\n")
@@ -119,18 +119,18 @@ def check_if_winner():
                     and board[row][column + 2] == '🟡'
                     and board[row][column + 3] == '🟡'):
                 if player_chip == '🟡':
-                    print(f" Congratulations {name} - You Win!")
+                    print(f"Congratulations {name} - You Win! \n")
                 else:
-                    print(f" Hard luck {name} - Computer Wins!")
+                    print(f"Hard luck {name} - Computer Wins! \n")
                 return True
             elif (board[row][column] == '🔴'
                     and board[row][column + 1] == '🔴'
                     and board[row][column + 2] == '🔴'
                     and board[row][column + 3] == '🔴'):
                 if player_chip == '🔴':
-                    print(f" Congratulations {name} - You Win!")
+                    print(f"Congratulations {name} - You Win! \n")
                 else:
-                    print(f" Hard luck {name} - Computer Wins!")
+                    print(f"Hard luck {name} - Computer Wins! \n")
                 return True
 
     # Check vertical axis for winner
@@ -141,18 +141,18 @@ def check_if_winner():
                     and board[row + 2][column] == '🟡'
                     and board[row + 3][column] == '🟡'):
                 if player_chip == '🟡':
-                    print(f" Congratulations {name} - You Win!")
+                    print(f"Congratulations {name} - You Win! \n")
                 else:
-                    print(f" Hard luck {name} - Computer Wins!")
+                    print(f"Hard luck {name} - Computer Wins! \n")
                 return True
             elif (board[row][column] == '🔴'
                     and board[row + 1][column] == '🔴'
                     and board[row + 2][column] == '🔴'
                     and board[row + 3][column] == '🔴'):
                 if player_chip == '🔴':
-                    print(f" Congratulations {name} - You Win!")
+                    print(f"Congratulations {name} - You Win! \n")
                 else:
-                    print(f" Hard luck {name} - Computer Wins!")
+                    print(f"Hard luck {name} - Computer Wins! \n")
                 return True
 
     # Check diagonal-right grid for winner
@@ -163,18 +163,18 @@ def check_if_winner():
                     and board[row + 2][column + 2] == '🟡'
                     and board[row + 3][column + 3] == '🟡'):
                 if player_chip == '🟡':
-                    print(f" Congratulations {name} - You Win!")
+                    print(f"Congratulations {name} - You Win! \n")
                 else:
-                    print(f" Hard luck {name} - Computer Wins!")
+                    print(f"Hard luck {name} - Computer Wins! \n")
                 return True
             elif (board[row][column] == '🔴'
                     and board[row + 1][column + 1] == '🔴'
                     and board[row + 2][column + 2] == '🔴'
                     and board[row + 3][column + 3] == '🔴'):
                 if player_chip == '🔴':
-                    print(f" Congratulations {name} - You Win!")
+                    print(f"Congratulations {name} - You Win! \n")
                 else:
-                    print(f" Hard luck {name} - Computer Wins")
+                    print(f"Hard luck {name} - Computer Wins \n")
                 return True
 
     # Check diagonal-left grid for winner
@@ -185,9 +185,9 @@ def check_if_winner():
                     and board[row + 2][column - 2] == '🟡'
                     and board[row + 3][column - 3] == '🟡'):
                 if player_chip == '🟡':
-                    print(f" Congratulations {name} - You Win!")
+                    print(f"Congratulations {name} - You Win! \n")
                 else:
-                    print(f" Hard luck {name} - Computer Wins!")
+                    print(f"Hard luck {name} - Computer Wins! \n")
                 return True
 
             elif (board[row][column] == '🔴'
@@ -195,9 +195,9 @@ def check_if_winner():
                     and board[row + 2][column - 2] == '🔴'
                     and board[row + 3][column - 3] == '🔴'):
                 if player_chip == '🔴':
-                    print(f" Congratulations {name} - You Win!")
+                    print(f"Congratulations {name} - You Win! \n")
                 else:
-                    print(f" Hard luck {name} - Computer Wins!")
+                    print(f"Hard luck {name} - Computer Wins! \n")
                 return True
 
     return False
@@ -302,10 +302,10 @@ def start_game():
 
 def restart_game():
     """Restarts the game or quits the game"""
-    restart = input("Press r to restart game or q to quit \n").lower()
+    restart = input("Press (R) to restart game or (Q) to quit \n").lower()
     while restart != "r" and restart != "q":
         print("Invalid choice")
-        restart = input("Press r to restart game or q to quit \n").lower()
+        restart = input("Press (R) to restart game or (Q) to quit \n").lower()
     if restart == "r":
         clear()
         board.clear()
