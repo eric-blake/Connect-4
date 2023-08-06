@@ -313,7 +313,10 @@ def restart_game():
         start_game()
 
     else:
+        print("Game over \n")
         sys.exit()
+
+        
 
 
 # clear function from Stackoverflow
