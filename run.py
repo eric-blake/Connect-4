@@ -8,7 +8,9 @@ BOARD_ROWS = 6
 
 
 def welcome():
-    """Prints the welcome message and prompts the user for their name"""
+    """Prints the welcome message and prompts the user for their name.
+    The name is validated to be 2 to 15 letters in length
+    The intructions for the game are then printed."""
     try:
         with open('./welcome.txt', 'r') as file:
             title = file.read()
@@ -37,7 +39,7 @@ def welcome():
 
 
 def make_board():
-    """Sets the board size"""
+    """Sets the board size, number of columns by number of rows"""
     # how to create a 2D array from www.geeksforgeeks.org
     board = [[" " for column in range(BOARD_COLS)]
              for row in range(BOARD_ROWS)]
@@ -59,14 +61,14 @@ def print_board():
 
 
 def is_valid_move(board, column):
-    """check if top column is free, if true then make move"""
+    """check if top column is free, if true then the move is valid"""
     if board[BOARD_ROWS - 6][column] == " ":
         return True
     return False
 
 
 def get_row(board, column):
-    """check board for empty row and return that row"""
+    """check board for empty row from top down and return that row"""
     for row in range(BOARD_ROWS-1, -1, -1):
         if board[row][column] == " ":
             return row
@@ -100,7 +102,7 @@ def player_chip_color():
 
 
 def computer_chip_color():
-    """Sets the computer chip colour based on user selection"""
+    """Sets the computer chip colour based on the colour the user selected"""
     global computer_chip
     if player_chip == '🔴':
         computer_chip = '🟡'
@@ -110,7 +112,7 @@ def computer_chip_color():
 
 
 def check_if_winner():
-    """Check if four in a row and return winner"""
+    """Check for four in a row and return winner message"""
     # Check horizontal axis for winner
     for row in range(BOARD_ROWS):
         for column in range(BOARD_COLS - 3):
@@ -241,7 +243,8 @@ def prevent_win():
 
 
 def computer_move():
-    """Gets random number and checks columns for free space, then drops chip"""
+    """Gets random number and checks columns for free space,
+    then drops chip in that column"""
     column = random_number()
     if is_valid_move(board, column):
         row = get_row(board, column)
@@ -252,7 +255,8 @@ def computer_move():
 
 
 def start_game():
-    """This is the main start game function"""
+    """This is the main start game function.
+    It starts the game and increments the turns"""
     global board
     global turns
     turns = 0
@@ -301,7 +305,7 @@ def start_game():
 
 
 def restart_game():
-    """Restarts the game or quits the game"""
+    """Restarts the game or quits the game baed on user input"""
     restart = input("Press (R) to restart game or (Q) to quit \n").lower()
     while restart != "r" and restart != "q":
         print("Invalid choice")
