@@ -34,7 +34,7 @@ Connect 4 is a two-player connection rack game. My version of the game has been 
 ## UX design:
 
 ### Wireframe
-As this is a Python terminal game, a wireframe was not deemed necessary.
+As this is a Python terminal game, a wireframe was deemed unnecessary.
 
 ### Structure & Logical Flow
 A flowchart of the game flow and logic was created using Microsoft Visio. The flow charts shows how the game will flow and allows consideration for the inputs, outputs and validation required.

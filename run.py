@@ -10,7 +10,7 @@ BOARD_ROWS = 6
 def welcome():
     """Prints the welcome message and prompts the user for their name.
     The name is validated to be 2 to 15 letters in length
-    The intructions for the game are then printed."""
+    The instructions for the game are then printed."""
     try:
         with open('./welcome.txt', 'r') as file:
             title = file.read()
@@ -176,7 +176,7 @@ def check_if_winner():
                 if player_chip == '🔴':
                     print(f"Congratulations {name} - You Win! \n")
                 else:
-                    print(f"Hard luck {name} - Computer Wins \n")
+                    print(f"Hard luck {name} - Computer Wins! \n")
                 return True
 
     # Check diagonal-left grid for winner
@@ -206,7 +206,7 @@ def check_if_winner():
 
 
 def play_game():
-    """Calls the welcome messaage and starts the game,
+    """Calls the welcome message and starts the game,
     this function is not called if the user restarts the game"""
     welcome()
     start_game()
